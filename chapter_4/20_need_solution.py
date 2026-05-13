@@ -10,8 +10,28 @@
 
 # Примечание. Серединное значение набора чисел – это число, которое находится в середине этого набора, если его упорядочить по возрастанию.
 
-a = int(input()) # 1
-b = int(input()) # 2
-c = int(input()) # 3
+# как решил
 
-# нужно решение
+a = int(input())  # 1
+b = int(input())  # 2
+c = int(input())  # 3
+
+num_list = [a, b, c]
+
+num_list.remove(max(num_list))
+num_list.remove(min(num_list))
+
+print(num_list[0])
+
+# как должно быть:
+
+"""
+a, b, c = int(input()), int(input()), int(input())
+
+if (b < a < c) or (c < a < b):
+    print(a)
+elif (a < b < c) or (c < b < a):
+    print(b)
+else:
+    print(c)
+"""
